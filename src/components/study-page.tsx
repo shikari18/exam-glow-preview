@@ -41,7 +41,7 @@ export function StudyPage({
           ) : null}
         </header>
 
-        <PageGuide id={guideId} steps={steps} tip={tip} />
+        <PageGuide id={guideId} steps={steps} {...(tip ? { tip } : {})} />
 
         {children}
       </main>
