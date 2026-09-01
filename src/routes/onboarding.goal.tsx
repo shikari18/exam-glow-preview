@@ -52,7 +52,7 @@ function GoalStep() {
 
   return (
     <OnboardingShell title="What are you studying for?" step={2}>
-      <div className="mx-auto flex max-w-2xl flex-col gap-3">
+      <div className="mx-auto flex max-w-2xl flex-col gap-2">
         {goals.map(({ label, hint, Icon }) => (
           <button
             key={label}
@@ -61,9 +61,9 @@ function GoalStep() {
               saveProfile({ goal: label });
               navigate({ to: "/onboarding/source" });
             }}
-            className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-4 text-left transition-colors hover:bg-secondary"
+            className="flex items-center gap-4 rounded-2xl border border-border bg-card px-5 py-3 text-left transition-colors hover:bg-secondary"
           >
-            <span className="flex size-11 shrink-0 items-center justify-center rounded-full bg-secondary">
+            <span className="flex size-10 shrink-0 items-center justify-center rounded-full bg-secondary">
               <Icon className="size-5" aria-hidden />
             </span>
             <span>
