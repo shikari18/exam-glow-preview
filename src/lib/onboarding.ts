@@ -4,7 +4,7 @@ export type OnboardingProfile = {
   role?: string;
   goal?: string;
   source?: string;
-  plan?: "annual" | "monthly" | "free";
+  plan?: "weekly" | "monthly" | "season" | "free";
 };
 
 const KEY = "examglow.profile";
