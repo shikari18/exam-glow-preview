@@ -31,12 +31,14 @@ const plans = [
     name: "Weekly",
     sub: "$5.99 billed weekly",
     price: "$5.99",
+    per: "/wk",
   },
   {
     id: "monthly" as const,
     name: "Monthly",
     sub: "$12.00 billed monthly",
     price: "$12.00",
+    per: "/mo",
     badge: "MOST POPULAR",
   },
   {
@@ -44,6 +46,7 @@ const plans = [
     name: "Exam Season",
     sub: "$30.00 every 3 months",
     price: "$30.00",
+    per: "/3mo",
     badge: "BEST VALUE — SAVE 17%",
   },
 ];
@@ -147,7 +150,7 @@ function PricingPage() {
                     <span className="flex items-center gap-4">
                       <span className="font-display text-3xl">
                         {plan.price}
-                        <span className="text-base text-muted-foreground">/mo</span>
+                        <span className="text-base text-muted-foreground">{plan.per}</span>
                       </span>
                       <span
                         className={`flex size-7 items-center justify-center rounded-full border ${
