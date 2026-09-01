@@ -2,7 +2,15 @@ import { Link } from "@tanstack/react-router";
 
 import logoMark from "@/assets/logo-mark.png";
 
-const links = ["Features", "Educators & Enterprise", "About"];
+const links = [
+  { label: "Syllabus", to: "/syllabus" },
+  { label: "Past Questions", to: "/past-questions" },
+  { label: "Flashcards", to: "/flashcards" },
+  { label: "Quizzes", to: "/quizzes" },
+  { label: "Tutors", to: "/tutors" },
+  { label: "Arcade", to: "/arcade" },
+  { label: "Pricing", to: "/pricing" },
+] as const;
 
 export function SiteNav() {
   return (
@@ -19,22 +27,16 @@ export function SiteNav() {
           <span className="text-[22px] font-bold tracking-tight">ExamGlow</span>
         </Link>
 
-        <nav className="hidden items-center gap-9 lg:flex">
-          {links.map((label) => (
-            <button
-              key={label}
-              className="flex items-center gap-1.5 text-[15px] text-foreground/85 transition-colors hover:text-foreground"
+        <nav className="hidden items-center gap-7 lg:flex">
+          {links.map(({ label, to }) => (
+            <Link
+              key={to}
+              to={to}
+              className="text-[15px] text-foreground/85 transition-colors hover:text-foreground"
+              activeProps={{ className: "text-foreground font-semibold" }}
             >
               {label}
-              <svg width="11" height="7" viewBox="0 0 11 7" fill="none" aria-hidden>
-                <path
-                  d="M1 1l4.5 4.5L10 1"
-                  stroke="currentColor"
-                  strokeWidth="1.4"
-                  strokeLinecap="round"
-                />
-              </svg>
-            </button>
+            </Link>
           ))}
         </nav>
 
