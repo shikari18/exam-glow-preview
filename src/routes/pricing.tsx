@@ -84,7 +84,7 @@ function PricingPage() {
         </button>
       </div>
 
-      <div className="mx-auto grid max-w-6xl items-center gap-14 py-16 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl items-start gap-10 py-8 lg:grid-cols-2">
         <div>
           <img
             src={balanceDoodle}
@@ -94,7 +94,7 @@ function PricingPage() {
             height={760}
             className="mx-auto w-full max-w-sm invert"
           />
-          <figure className="mt-8 rounded-2xl bg-card p-6">
+          <figure className="mt-5 rounded-2xl bg-card p-6">
             <blockquote className="text-[15px] leading-relaxed">
               “I knew ExamGlow was fantastic for me when I could remember information without having
               to put a pen on paper at all.”
@@ -116,15 +116,15 @@ function PricingPage() {
           </figure>
         </div>
 
-        <div>
+        <div className="lg:-mt-4">
           <h1 className="text-[clamp(1.75rem,3.5vw,2.75rem)] leading-tight">
             92% of ExamGlow subscribers improved their grades
           </h1>
-          <p className="mt-3 text-muted-foreground">
+          <p className="mt-2 text-muted-foreground">
             Join <strong className="text-foreground">8M+</strong> students already using ExamGlow
           </p>
 
-          <div className="mt-8 space-y-4">
+          <div className="mt-5 space-y-3">
             {plans.map((plan) => {
               const active = selected === plan.id;
               return (
@@ -170,11 +170,11 @@ function PricingPage() {
             type="button"
             onClick={unlock}
             disabled={processing}
-            className="mt-10 w-full rounded-full bg-ink-foreground py-4 text-lg font-medium text-ink transition-transform hover:-translate-y-0.5 disabled:opacity-70"
+            className="mt-6 w-full rounded-full bg-ink-foreground py-4 text-lg font-medium text-ink transition-transform hover:-translate-y-0.5 disabled:opacity-70"
           >
             {processing ? "Setting up your workspace..." : "Unlock Premium"}
           </button>
-          <p className="mt-3 text-center text-sm text-muted-foreground">
+          <p className="mt-2 text-center text-sm text-muted-foreground">
             Cancel anytime · No pressure · Secure checkout
           </p>
         </div>

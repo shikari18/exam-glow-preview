@@ -47,9 +47,9 @@ export function OnboardingShell({
         )}
       </div>
 
-      <div className="mx-auto w-full max-w-3xl py-16 sm:py-24">
+      <div className="mx-auto w-full max-w-3xl py-8 sm:py-10">
         <h1 className="text-center text-[clamp(2rem,5vw,3.25rem)] leading-tight">{title}</h1>
-        <div className="mt-12">{children}</div>
+        <div className="mt-6">{children}</div>
       </div>
     </div>
   );
